@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace JeniesStory.Domain.Entities
 {
-    public class NewsArticle
+    public class News
     {
-        public NewsSource Source { get; set; }
+        public int Id { get; set; }
         public string Author { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
@@ -16,6 +16,7 @@ namespace JeniesStory.Domain.Entities
         public string UrlToImage { get; set; }
         public DateTime PublishedAt { get; set; }
         public string Content { get; set; }
+        public NewsSource Source { get; set; }
     }
 
     

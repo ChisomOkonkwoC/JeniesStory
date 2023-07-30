@@ -8,7 +8,7 @@ namespace JeniesStory.Domain.Entities
 {
     public class Story : BaseEntity
     {
-        public string AuthorId { get; set; }
+        public int AuthorId { get; set; }
 
         public string Title { get; set; }
 

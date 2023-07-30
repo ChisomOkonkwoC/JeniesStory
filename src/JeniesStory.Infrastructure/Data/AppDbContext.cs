@@ -19,7 +19,7 @@ namespace JeniesStory.Infrastructure.Data
         public DbSet<Author> Authors { get; set; }
         public DbSet<Bookmark> Bookmarks { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<NewsArticle> NewsArticles { get; set; }
+        public DbSet<News> NewsArticles { get; set; }
         public DbSet<Story> Stories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -29,32 +29,39 @@ namespace JeniesStory.Infrastructure.Data
             modelBuilder.Entity<Story>()
                 .HasOne(s => s.Author)
                 .WithMany(a => a.Stories)
-                .HasForeignKey(s => s.AuthorId);
+                .HasForeignKey(s => s.AuthorId)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<Bookmark>()
                 .HasOne(b => b.User)
                 .WithMany(u => u.Bookmarks)
-                .HasForeignKey(b => b.UserId);
+                .HasForeignKey(b => b.UserId)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<Bookmark>()
                 .HasOne(b => b.Story)
                 .WithMany(s => s.Bookmarks)
-                .HasForeignKey(b => b.StoryId);
+                .HasForeignKey(b => b.StoryId)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<Comment>()
                 .HasOne(b => b.Story)
                 .WithMany(s => s.Comments)
-                .HasForeignKey(b => b.StoryId);
+                .HasForeignKey(b => b.StoryId)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<Comment>()
                .HasOne(b => b.User)
                .WithMany(s => s.Comments)
-               .HasForeignKey(b => b.UserId);
+               .HasForeignKey(b => b.UserId)
+               .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<Comment>()
                .HasOne(b => b.Author)
                .WithMany(s => s.Comments)
-               .HasForeignKey(b => b.AuthorId);            
+               .HasForeignKey(b => b.AuthorId)
+               .OnDelete(DeleteBehavior.ClientCascade);
+            
         }
     }
 }

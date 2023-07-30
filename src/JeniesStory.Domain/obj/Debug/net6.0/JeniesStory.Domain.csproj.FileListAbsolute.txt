@@ -1,0 +1,12 @@
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Domain\bin\Debug\net6.0\JeniesStory.Domain.deps.json
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Domain\bin\Debug\net6.0\JeniesStory.Domain.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Domain\bin\Debug\net6.0\ref\JeniesStory.Domain.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Domain\bin\Debug\net6.0\JeniesStory.Domain.pdb
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Domain\obj\Debug\net6.0\JeniesStory.Domain.csproj.AssemblyReference.cache
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Domain\obj\Debug\net6.0\JeniesStory.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Domain\obj\Debug\net6.0\JeniesStory.Domain.AssemblyInfoInputs.cache
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Domain\obj\Debug\net6.0\JeniesStory.Domain.AssemblyInfo.cs
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Domain\obj\Debug\net6.0\JeniesStory.Domain.csproj.CoreCompileInputs.cache
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Domain\obj\Debug\net6.0\JeniesStory.Domain.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Domain\obj\Debug\net6.0\ref\JeniesStory.Domain.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Domain\obj\Debug\net6.0\JeniesStory.Domain.pdb

@@ -1,0 +1,17 @@
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\bin\Debug\net6.0\JeniesStory.Infrastructure.deps.json
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\bin\Debug\net6.0\JeniesStory.Infrastructure.runtimeconfig.json
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\bin\Debug\net6.0\JeniesStory.Infrastructure.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\bin\Debug\net6.0\ref\JeniesStory.Infrastructure.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\bin\Debug\net6.0\JeniesStory.Infrastructure.pdb
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\bin\Debug\net6.0\JeniesStory.Domain.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\bin\Debug\net6.0\JeniesStory.Domain.pdb
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\obj\Debug\net6.0\JeniesStory.Infrastructure.csproj.AssemblyReference.cache
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\obj\Debug\net6.0\JeniesStory.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\obj\Debug\net6.0\JeniesStory.Infrastructure.AssemblyInfoInputs.cache
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\obj\Debug\net6.0\JeniesStory.Infrastructure.AssemblyInfo.cs
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\obj\Debug\net6.0\JeniesStory.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\obj\Debug\net6.0\JeniesStory.Infrastructure.csproj.CopyComplete
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\obj\Debug\net6.0\JeniesStory.Infrastructure.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\obj\Debug\net6.0\ref\JeniesStory.Infrastructure.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\obj\Debug\net6.0\JeniesStory.Infrastructure.pdb
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Infrastructure\obj\Debug\net6.0\JeniesStory.Infrastructure.genruntimeconfig.cache

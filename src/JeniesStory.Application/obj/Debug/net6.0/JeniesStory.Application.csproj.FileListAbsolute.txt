@@ -1,0 +1,17 @@
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\bin\Debug\net6.0\JeniesStory.Application.deps.json
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\bin\Debug\net6.0\JeniesStory.Application.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\bin\Debug\net6.0\ref\JeniesStory.Application.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\bin\Debug\net6.0\JeniesStory.Application.pdb
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\bin\Debug\net6.0\JeniesStory.Domain.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\bin\Debug\net6.0\JeniesStory.Infrastructure.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\bin\Debug\net6.0\JeniesStory.Domain.pdb
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\bin\Debug\net6.0\JeniesStory.Infrastructure.pdb
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\obj\Debug\net6.0\JeniesStory.Application.csproj.AssemblyReference.cache
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\obj\Debug\net6.0\JeniesStory.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\obj\Debug\net6.0\JeniesStory.Application.AssemblyInfoInputs.cache
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\obj\Debug\net6.0\JeniesStory.Application.AssemblyInfo.cs
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\obj\Debug\net6.0\JeniesStory.Application.csproj.CoreCompileInputs.cache
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\obj\Debug\net6.0\JeniesStory.Application.csproj.CopyComplete
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\obj\Debug\net6.0\JeniesStory.Application.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\obj\Debug\net6.0\ref\JeniesStory.Application.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Application\obj\Debug\net6.0\JeniesStory.Application.pdb
