@@ -12,6 +12,11 @@ namespace JeniesStory.Api.Configuration
             services.AddScoped<ITokenGenerator, TokenGenerator>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IMailJetService, MailJetService>();
+            services.AddScoped<IStoryService, StoryService>();
+            services.AddScoped<ICommentService, CommentService>();
+            services.AddScoped<IBookmarkService, BookmarkService>();
+            services.AddScoped<IAdminService, AdminService>();
+            services.AddScoped<IAuthorService, AuthorService>();
             services.AddHttpClient<IMailjetClient, MailjetClient>(client =>
             {
                 client.UseBasicAuthentication(config.GetSection("MailJetKeys")["ApiKey"], config.GetSection("MailJetKeys")["ApiSecret"]);

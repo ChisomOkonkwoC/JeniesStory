@@ -27,6 +27,7 @@ namespace JeniesStory.Application.Services.Implementations
         public async Task<string> GenerateTokenAsync(User user, string refreshToken, string roleId)
         {
             roleId = roleId ?? "default";
+            //authorId = authorId ?? "default";
             var userClaims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
@@ -34,6 +35,7 @@ namespace JeniesStory.Application.Services.Implementations
                 new Claim("FirstName", user.FirstName),
                 new Claim("LastName", user.LastName),
                 new Claim("RoleId", roleId),
+                //new Claim("AuthorId", authorId),
                 new Claim("RefreshToken", refreshToken),
             };
 

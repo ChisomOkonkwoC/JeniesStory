@@ -4,7 +4,9 @@ using JeniesStory.Application.Dtos.Responses;
 using JeniesStory.Application.Services.Interfaces;
 using JeniesStory.Application.Utilities;
 using JeniesStory.Domain.Entities;
+using JeniesStory.Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,20 +24,29 @@ namespace JeniesStory.Application.Services.Implementations
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IMapper _mapper;
         private readonly IEmailService _emailService;
+        private readonly AppDbContext _dbContext;
 
         public AuthenticationService(ITokenGenerator tokenGenerator, UserManager<User> userManager, RoleManager<IdentityRole> roleManager,
-                                      IMapper mapper, IEmailService emailService)
+                                      IMapper mapper, IEmailService emailService, AppDbContext dbContext)
         {
             _tokenGenerator = tokenGenerator;
             _userManager = userManager;
             _roleManager = roleManager;
             _mapper = mapper;
             _emailService = emailService;
+            _dbContext = dbContext;
         }
 
         public async Task<GenericResponse<UserResponseDto>> LoginAynsc(LoginRequestDto loginRequest)
         {
             var user = await _userManager.FindByEmailAsync(loginRequest.Email);
+            
+            /*var author = await _dbContext.Authors.FirstOrDefaultAsync(x => x.Email == loginRequest.Email);
+            if(author == null)
+            {
+                author.Id = Guid.Parse("default");
+            }*/
+
             if (user == null)
             {
                 return GenericResponse<UserResponseDto>.Fail
@@ -109,6 +120,7 @@ namespace JeniesStory.Application.Services.Implementations
         public async Task<GenericResponse<UserResponseDto>> EmailConfirmationAsync(ConfirmEmailRequestDto confirmEmailRequest)
         {
             var user = await _userManager.FindByEmailAsync(confirmEmailRequest.Email);
+            //var author = await _dbContext.Authors.FirstOrDefaultAsync(x => x.Email == confirmEmailRequest.Email);
             if (user != null)
             {
                 if (user.EmailConfirmed)

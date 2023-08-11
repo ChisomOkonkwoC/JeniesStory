@@ -8,15 +8,15 @@ namespace JeniesStory.Domain.Entities
 {
     public class Comment : BaseEntity
     {
-        public int StoryId { get; set; }
+        public Guid StoryId { get; set; }
 
         public string UserId { get; set; }
 
-        public int AuthorId { get; set; }
+        public Guid? AuthorId { get; set; }
+
+        public Guid? AdminId { get; set; }
 
         public string Text { get; set; }
-
-        public DateTime CommentDate { get; set; }
 
         public bool IsApproved { get; set; }
 
@@ -24,7 +24,9 @@ namespace JeniesStory.Domain.Entities
 
         public Story Story { get; set; }
         
-        public Author Author { get; set; }          
+        public Author Author { get; set; } 
+        
+        public Admin Admin { get; set; }          
         
     }
 }

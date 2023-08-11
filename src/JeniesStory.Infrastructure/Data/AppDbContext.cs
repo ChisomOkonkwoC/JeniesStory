@@ -21,6 +21,7 @@ namespace JeniesStory.Infrastructure.Data
         public DbSet<Comment> Comments { get; set; }
         public DbSet<News> NewsArticles { get; set; }
         public DbSet<Story> Stories { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,6 +32,7 @@ namespace JeniesStory.Infrastructure.Data
                 .WithMany(a => a.Stories)
                 .HasForeignKey(s => s.AuthorId)
                 .OnDelete(DeleteBehavior.ClientCascade);
+            
 
             modelBuilder.Entity<Bookmark>()
                 .HasOne(b => b.User)
@@ -61,7 +63,25 @@ namespace JeniesStory.Infrastructure.Data
                .WithMany(s => s.Comments)
                .HasForeignKey(b => b.AuthorId)
                .OnDelete(DeleteBehavior.ClientCascade);
-            
+
+            modelBuilder.Entity<Comment>()
+               .HasOne(b => b.Admin)
+               .WithMany(s => s.ApprovedComments)
+               .HasForeignKey(b => b.AdminId)
+               .OnDelete(DeleteBehavior.ClientCascade);
+
+            modelBuilder.Entity<Author>()
+               .HasOne(b => b.User)
+               .WithMany(s => s.Authors)
+               .HasForeignKey(b => b.UserId)
+               .OnDelete(DeleteBehavior.ClientCascade);
+
+            modelBuilder.Entity<Admin>()
+               .HasOne(b => b.User)
+               .WithMany(s => s.Admins)
+               .HasForeignKey(b => b.UserId)
+               .OnDelete(DeleteBehavior.ClientCascade);
+
         }
     }
 }

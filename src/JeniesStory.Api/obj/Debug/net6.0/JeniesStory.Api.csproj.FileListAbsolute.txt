@@ -90,3 +90,4 @@ C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Api\bin\Debug\net6.0\Mas
 C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Api\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
 C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Api\bin\Debug\net6.0\NewId.dll
 C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Api\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Workspace\C#\JeniesStory\JeniesStory\src\JeniesStory.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

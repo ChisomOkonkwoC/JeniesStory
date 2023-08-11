@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JeniesStory.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230730090718_initial")]
+    [Migration("20230809124828_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,13 +24,51 @@ namespace JeniesStory.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("JeniesStory.Domain.Entities.Admin", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DepricatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DepricatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Admins");
+                });
+
             modelBuilder.Entity("JeniesStory.Domain.Entities.Author", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Bio")
                         .HasColumnType("nvarchar(max)");
@@ -59,21 +97,27 @@ namespace JeniesStory.Infrastructure.Migrations
                     b.Property<string>("ProfilePictureUrl")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Authors");
                 });
 
             modelBuilder.Entity("JeniesStory.Domain.Entities.Bookmark", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -90,8 +134,8 @@ namespace JeniesStory.Infrastructure.Migrations
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
-                    b.Property<int>("StoryId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("StoryId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
@@ -107,17 +151,15 @@ namespace JeniesStory.Infrastructure.Migrations
 
             modelBuilder.Entity("JeniesStory.Domain.Entities.Comment", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    b.Property<Guid?>("AdminId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("AuthorId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CommentDate")
-                        .HasColumnType("datetime2");
+                    b.Property<Guid?>("AuthorId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -137,8 +179,8 @@ namespace JeniesStory.Infrastructure.Migrations
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
-                    b.Property<int>("StoryId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("StoryId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Text")
                         .HasColumnType("nvarchar(max)");
@@ -147,6 +189,8 @@ namespace JeniesStory.Infrastructure.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AdminId");
 
                     b.HasIndex("AuthorId");
 
@@ -159,11 +203,9 @@ namespace JeniesStory.Infrastructure.Migrations
 
             modelBuilder.Entity("JeniesStory.Domain.Entities.News", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Author")
                         .HasColumnType("nvarchar(max)");
@@ -211,14 +253,18 @@ namespace JeniesStory.Infrastructure.Migrations
 
             modelBuilder.Entity("JeniesStory.Domain.Entities.Story", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    b.Property<Guid?>("AdminId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("AuthorId")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("ApprovedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("AuthorId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
@@ -231,6 +277,12 @@ namespace JeniesStory.Infrastructure.Migrations
 
                     b.Property<string>("DepricatedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsApproved")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPublished")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
@@ -245,6 +297,8 @@ namespace JeniesStory.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AdminId");
 
                     b.HasIndex("AuthorId");
 
@@ -479,6 +533,26 @@ namespace JeniesStory.Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("JeniesStory.Domain.Entities.Admin", b =>
+                {
+                    b.HasOne("JeniesStory.Domain.Entities.User", "User")
+                        .WithMany("Admins")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.ClientCascade);
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("JeniesStory.Domain.Entities.Author", b =>
+                {
+                    b.HasOne("JeniesStory.Domain.Entities.User", "User")
+                        .WithMany("Authors")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.ClientCascade);
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("JeniesStory.Domain.Entities.Bookmark", b =>
                 {
                     b.HasOne("JeniesStory.Domain.Entities.Story", "Story")
@@ -499,11 +573,15 @@ namespace JeniesStory.Infrastructure.Migrations
 
             modelBuilder.Entity("JeniesStory.Domain.Entities.Comment", b =>
                 {
+                    b.HasOne("JeniesStory.Domain.Entities.Admin", "Admin")
+                        .WithMany("ApprovedComments")
+                        .HasForeignKey("AdminId")
+                        .OnDelete(DeleteBehavior.ClientCascade);
+
                     b.HasOne("JeniesStory.Domain.Entities.Author", "Author")
                         .WithMany("Comments")
                         .HasForeignKey("AuthorId")
-                        .OnDelete(DeleteBehavior.ClientCascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.ClientCascade);
 
                     b.HasOne("JeniesStory.Domain.Entities.Story", "Story")
                         .WithMany("Comments")
@@ -515,6 +593,8 @@ namespace JeniesStory.Infrastructure.Migrations
                         .WithMany("Comments")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.ClientCascade);
+
+                    b.Navigation("Admin");
 
                     b.Navigation("Author");
 
@@ -534,11 +614,17 @@ namespace JeniesStory.Infrastructure.Migrations
 
             modelBuilder.Entity("JeniesStory.Domain.Entities.Story", b =>
                 {
+                    b.HasOne("JeniesStory.Domain.Entities.Admin", "Admin")
+                        .WithMany("ApprovedStories")
+                        .HasForeignKey("AdminId");
+
                     b.HasOne("JeniesStory.Domain.Entities.Author", "Author")
                         .WithMany("Stories")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
+
+                    b.Navigation("Admin");
 
                     b.Navigation("Author");
                 });
@@ -594,6 +680,13 @@ namespace JeniesStory.Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("JeniesStory.Domain.Entities.Admin", b =>
+                {
+                    b.Navigation("ApprovedComments");
+
+                    b.Navigation("ApprovedStories");
+                });
+
             modelBuilder.Entity("JeniesStory.Domain.Entities.Author", b =>
                 {
                     b.Navigation("Comments");
@@ -610,6 +703,10 @@ namespace JeniesStory.Infrastructure.Migrations
 
             modelBuilder.Entity("JeniesStory.Domain.Entities.User", b =>
                 {
+                    b.Navigation("Admins");
+
+                    b.Navigation("Authors");
+
                     b.Navigation("Bookmarks");
 
                     b.Navigation("Comments");

@@ -9,6 +9,7 @@ namespace JeniesStory.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public class AuthenticationController : ControllerBase
     {
         private readonly IAuthService _authService;
@@ -17,6 +18,8 @@ namespace JeniesStory.Api.Controllers
         {
             _authService = authService;
         }
+
+        [AllowAnonymous]
         [HttpPost("[action]", Name = "Login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto loginRequest)
         {
@@ -26,8 +29,7 @@ namespace JeniesStory.Api.Controllers
                 {
                     return BadRequest(ModelState);
                 }
-                var ipAddress = HttpContext.Connection.RemoteIpAddress.ToString();
-                var userAgent = HttpContext.Request.Headers.UserAgent.ToString();
+                
                 return Ok(await _authService.LoginAynsc(loginRequest));
             }
             catch (AccessViolationException)

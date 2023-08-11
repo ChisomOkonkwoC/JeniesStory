@@ -15,6 +15,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDependencyInjection(builder.Configuration);
+builder.Services.ConfigureAuthentication(builder.Configuration);
+builder.Services.AddSwaggerConfiguration();
 builder.Services.AddAutoMapper(typeof(UserMapper));
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {

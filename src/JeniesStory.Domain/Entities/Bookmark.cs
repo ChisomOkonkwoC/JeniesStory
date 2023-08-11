@@ -10,7 +10,7 @@ namespace JeniesStory.Domain.Entities
     {              
         public string UserId { get; set; }
 
-        public int StoryId { get; set; }
+        public Guid StoryId { get; set; }
 
         public User User { get; set; }           
        

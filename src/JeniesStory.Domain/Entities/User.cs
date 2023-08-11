@@ -30,6 +30,11 @@ namespace JeniesStory.Domain.Entities
         public bool Status { get; set; } = true;
 
         public ICollection<Bookmark> Bookmarks { get; set; }
+
         public ICollection<Comment> Comments { get; set; }
+
+        public ICollection<Author> Authors { get; set; }
+
+        public ICollection<Admin> Admins { get; set; }
     }
 }

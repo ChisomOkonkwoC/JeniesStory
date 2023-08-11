@@ -16,6 +16,18 @@ namespace JeniesStory.Application.Mapper
         {
             CreateMap<UserResponseDto, User>().ReverseMap();
             CreateMap<RegistrationRequestDto, User>().ReverseMap();
+            CreateMap<StoryRequestDto, Story>().ReverseMap();
+            CreateMap<StoryResponseDto, Story>().ReverseMap();
+            CreateMap<AuthorRequestDto, Author>().ReverseMap();
+            CreateMap<AuthorResponseDto, Author>().ReverseMap();
+            CreateMap<AdminResponseDto, Admin>().ReverseMap();
+            CreateMap<AdminRequestDto, Admin>().ReverseMap();
+            CreateMap<AuthorResponseDto, Author>().ReverseMap();
+            CreateMap<AuthorResponseDto, Author>().ReverseMap();
+            CreateMap<CommentRequestDto, Comment>().ReverseMap();
+            CreateMap<CommentResponseDto, Comment>().ReverseMap();
+            CreateMap<ApproveByAdminDto, Comment>().ReverseMap();
+            CreateMap<ApproveByAuthorDto, Comment>().ReverseMap();
         }
     }
 }
