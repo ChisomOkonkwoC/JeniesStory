@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OuOGjbbtRUCVm1V3J49DQGK/kJoocLNXx/qdOPae5JTbPB4NDWCgLHFCXAbmEERESqZw8g/q+Gl/aU5hImtU9A==",
+  "dgSpecHash": "VfRbGrnaTLxMGItB1KHTz09QXFZIgae3DgiYP6athIDSsiQ/0cRyc7gBfmVv7mXSig2MeQArGqD6S+IRC6EnUA==",
   "success": true,
   "projectFilePath": "C:\\Workspace\\C#\\JeniesStory\\JeniesStory\\src\\JeniesStory.Api\\JeniesStory.Api.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.http\\6.0.0\\microsoft.extensions.http.6.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.20\\microsoft.extensions.identity.core.6.0.20.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.20\\microsoft.extensions.identity.stores.6.0.20.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "77335d96-9ef7-4798-8264-c2b41c95a9dd": {
+      "ProjectGuid": "77335d96-9ef7-4798-8264-c2b41c95a9dd",
+      "DisplayName": "JeniesStory.Api",
+      "ColorIndex": 0
+    },
+    "d91773b6-559c-40d1-bacb-438386563d22": {
+      "ProjectGuid": "d91773b6-559c-40d1-bacb-438386563d22",
+      "DisplayName": "JeniesStory.Application",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

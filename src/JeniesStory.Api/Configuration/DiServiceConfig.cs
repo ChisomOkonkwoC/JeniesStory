@@ -17,6 +17,7 @@ namespace JeniesStory.Api.Configuration
             services.AddScoped<IBookmarkService, BookmarkService>();
             services.AddScoped<IAdminService, AdminService>();
             services.AddScoped<IAuthorService, AuthorService>();
+            services.AddScoped<INewsService, NewsService>();
             services.AddHttpClient<IMailjetClient, MailjetClient>(client =>
             {
                 client.UseBasicAuthentication(config.GetSection("MailJetKeys")["ApiKey"], config.GetSection("MailJetKeys")["ApiSecret"]);

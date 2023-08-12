@@ -28,6 +28,10 @@ namespace JeniesStory.Application.Mapper
             CreateMap<CommentResponseDto, Comment>().ReverseMap();
             CreateMap<ApproveByAdminDto, Comment>().ReverseMap();
             CreateMap<ApproveByAuthorDto, Comment>().ReverseMap();
+            CreateMap<NewsResponse, News>().ReverseMap();
+            CreateMap<NewsArticles, News>().ReverseMap()
+                .ForPath(dest => dest.source.id, opt => opt.MapFrom(src => src.Source.newsId))
+                .ForPath(dest => dest.source.name, opt => opt.MapFrom(src => src.Source.Name)); ;
         }
     }
 }

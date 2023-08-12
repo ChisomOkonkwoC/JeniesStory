@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace JeniesStory.Infrastructure.Migrations
 {
-    public partial class initial : Migration
+    public partial class initialmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -62,7 +62,8 @@ namespace JeniesStory.Infrastructure.Migrations
                 name: "NewsSource",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    newsId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -241,7 +242,7 @@ namespace JeniesStory.Infrastructure.Migrations
                     UrlToImage = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PublishedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SourceId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    SourceId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {

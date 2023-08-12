@@ -9,31 +9,31 @@ namespace JeniesStory.Application.Dtos.Responses
 {
     public class NewsResponse
     {
-        public string Status { get; set; }
+        public string status { get; set; }
 
-        public int TotalResults { get; set; }
+        public int totalResults { get; set; }
 
-        public ICollection<NewsArticles> Articles { get; set; }
+        public ICollection<NewsArticles> articles { get; set; }
     }
 
     public class NewsArticles
     {        
-        public string Author { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public string author { get; set; }
+        public string title { get; set; }
+        public string description { get; set; }
         public string Url { get; set; }
-        public string UrlToImage { get; set; }
-        public DateTime PublishedAt { get; set; }
-        public string Content { get; set; }
-        public NewsSource Source { get; set; }
+        public string urlToImage { get; set; }
+        public DateTime publishedAt { get; set; }
+        public string content { get; set; }
+        public NewsSource source { get; set; }
     }
 
 
 
     public class NewsSource
     {
-        public string Id { get; set; }
+        public string id { get; set; }
 
-        public string Name { get; set; }
+        public string name { get; set; }
     }
 }

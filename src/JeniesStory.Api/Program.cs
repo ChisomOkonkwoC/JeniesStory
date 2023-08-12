@@ -18,6 +18,7 @@ builder.Services.AddDependencyInjection(builder.Configuration);
 builder.Services.ConfigureAuthentication(builder.Configuration);
 builder.Services.AddSwaggerConfiguration();
 builder.Services.AddAutoMapper(typeof(UserMapper));
+builder.Services.AddHttpClient();
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));

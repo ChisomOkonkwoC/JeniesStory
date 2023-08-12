@@ -217,8 +217,8 @@ namespace JeniesStory.Infrastructure.Migrations
                     b.Property<DateTime>("PublishedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("SourceId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid?>("SourceId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
@@ -238,10 +238,14 @@ namespace JeniesStory.Infrastructure.Migrations
 
             modelBuilder.Entity("JeniesStory.Domain.Entities.NewsSource", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("newsId")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
