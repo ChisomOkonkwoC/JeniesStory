@@ -31,6 +31,7 @@ namespace JeniesStory.Api.Configuration
                         new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWTSettings:SecretKey"])),
                     ClockSkew = TimeSpan.Zero
                 };
+                
 
             });
 
